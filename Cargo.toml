@@ -1,0 +1,25 @@
+[package]
+name = "rocket-hexagonal"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.42"
+chrono = "0.4.19"
+derive_builder = "0.10.2"
+derive_more = "0.99.16"
+env_logger = "0.9.0"
+lazy_static = "1.4"
+log = "0.4"
+num-traits = "0.2"
+parking_lot = "0.11.2"
+rocket = "0.5.0-rc.1"
+sea-orm = { version = "^0", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros" ], default-features = false }
+shaku = { version = ">= 0.5.0, < 0.7.0" }
+shaku_rocket = "0.7.0-rc.1"
+sqlx = { version = "0.5", features = [ "postgres", "runtime-tokio-rustls", "chrono", "migrate", "bigdecimal" ] }
+testcontainers = "0.12.0"
+tokio = { version = "1", features = ["full"] }
+walkdir = "2"
